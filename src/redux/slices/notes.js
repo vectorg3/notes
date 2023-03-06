@@ -9,7 +9,7 @@ const notesSlice = createSlice({
     addNote(state, action) {
       state.notesList = [
         ...state.notesList,
-        { title: action.payload.title, text: action.payload.text },
+        { id: Date.now(), title: action.payload.title, text: action.payload.text },
       ];
     },
   },
