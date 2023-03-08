@@ -12,7 +12,7 @@ function NoteItem(props) {
         if (isEditNote === false) {
             setIsEditNote(true);
             setEditText(text);
-        } else if (isEditNote === true && editText.length !== 0) {
+        } else if (isEditNote === true && editText.trim() !== '') {
             dispatch(addNote({ text: editText }));
             dispatch(deleteNote(id));
         }
