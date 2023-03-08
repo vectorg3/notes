@@ -1,0 +1,38 @@
+.logo{
+    margin: 2rem 0 2rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__img{
+        display: block;
+        width: 160px;
+        margin-bottom: 0.5rem;
+        @media(max-width: 770px){
+            width: 120px;
+        }
+        @media(max-width: 380px){
+            width: 80px;
+        }
+    }
+    &__title{
+        font-size: 32px;
+        margin-bottom: 0.5rem;
+        @media(max-width: 770px){
+            font-size: 28px;
+        }
+        @media(max-width: 380px){
+            font-size: 24px;
+        }
+    }
+    &__subtitle{
+        font-size: 22px;
+        text-align: center;
+        @media(max-width: 770px){
+            font-size: 18px;
+        }
+        @media(max-width: 380px){
+            font-size: 16px;
+        }
+    }
+}

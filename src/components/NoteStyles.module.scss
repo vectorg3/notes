@@ -1,16 +1,124 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    margin-top: 10rem;
+    margin: 0 auto 0 auto;
+    width: 560px;
+    @media (max-width: 618px) {
+        max-width: none;
+        width: 85%;
+    }
 }
-.note__input{
-    display: flex;
-    flex-direction: column;
-    max-width: 50%;
-    border: 2px solid gray;
-    padding: 2rem;
-    border-radius: 15px;
+.note {
+    &__input {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        border: 2px solid gray;
+        padding: 2rem;
+        border-radius: 15px;
+        margin: 0 2rem 0 2rem;
+        background: #d1d1d1;
+    }
+    &__list {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    &__item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        border: 2px solid black;
+        transition: 0.3s linear;
+        &:hover {
+            -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.48);
+            -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.48);
+            box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.48);
+            transition: 0.3s linear;
+        }
+    }
+    &__textArea {
+        font-family: inherit;
+        height: 130px;
+        font-size: 16px;
+        padding: 1rem;
+        background: white;
+        margin-bottom: 1rem;
+        border-radius: 15px;
+        resize: none;
+        overflow:hidden;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__btn {
+        padding: 1rem;
+        border-radius: 15px;
+        font-size: 16px;
+        background-color: aliceblue;
+        border: 2px solid black;
+        transition: 0.3s linear;
+        &:hover {
+            background-color: rgb(137, 137, 137);
+            color: white;
+            transition: 0.3s linear;
+        }
+    }
+    &__title {
+        width: 100%;
+        font-size: 18px;
+        padding: 1rem;
+        font-weight: bold;
+        background: rgb(165, 165, 165);
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__text {
+        font-size: 16px;
+        width: 100%;
+        word-wrap: break-word;
+        padding: 1rem;
+    }
+    &__remove {
+        display: block;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        transition: 0.3s linear;
+        &:hover {
+            rotate: 90deg;
+            transition: 0.3s linear;
+        }
+    }
+    &__edit {
+        padding: 1rem;
+        font-size: 14px;
+        background: #ffffff;
+        &_btn {
+            display: block;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            margin-right: 10px;
+            @media (max-width: 390px) {
+                margin-right: 5px;
+            }
+        }
+        @media (max-width: 390px) {
+            padding: 0.5rem;
+        }
+    }
+    &__control {
+        display: flex;
+        flex-direction: row;
+    }
 }
