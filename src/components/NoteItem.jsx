@@ -38,8 +38,7 @@ function NoteItem(props) {
             </div>
             <div className={styles.note__text}>
                 {isEditNote ? (
-                    <input
-                        type='text'
+                    <textarea
                         value={editText}
                         className={styles.note__edit}
                         onChange={(e) => setEditText(e.target.value)}

@@ -52,7 +52,6 @@
         margin-bottom: 1rem;
         border-radius: 15px;
         resize: none;
-        overflow:hidden;
         &:focus {
             outline: none;
         }
@@ -100,9 +99,12 @@
         }
     }
     &__edit {
+        width: 100%;
+        height: 100%;
         padding: 1rem;
         font-size: 14px;
         background: #ffffff;
+        resize: none;
         &_btn {
             display: block;
             width: 25px;
